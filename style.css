@@ -1,0 +1,133 @@
+ body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+     background: #fff;
+     color: #333;
+ }
+
+ header {
+     background: #f5e6d4;
+     padding: 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .logo {
+     font-size: 28px;
+     font-weight: bold;
+ }
+
+nav a {
+  color: #333;
+  margin: 0 15px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0d6efd;
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: #0d6efd;
+  transform: scale(1.1);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+ .hero {
+     display: flex;
+     padding: 40px;
+     background: #fafafa;
+ }
+
+ .hero-text {
+     flex: 1;
+     padding: 20px;
+ }
+
+ .hero-text h1 {
+     font-size: 50px;
+     line-height: 1.2;
+ }
+
+ .hero-text button {
+     padding: 12px 25px;
+     background: black;
+     color: white;
+     border: none;
+     cursor: pointer;
+     margin-top: 20px;
+ }
+
+ .hero-img {
+     flex: 1;
+ }
+
+ .hero-img img {
+     width: 100%;
+     border-radius: 10px;
+ }
+
+ .banner {
+     text-align: center;
+     padding: 50px 20px;
+     background: #fff5e9;
+ }
+
+ .banner h2 {
+     font-size: 40px;
+ }
+
+ .banner span {
+     font-size: 60px;
+     font-weight: bold;
+ }
+
+ .products {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+     padding: 40px;
+ }
+
+ .card {
+     background: white;
+     padding: 20px;
+     text-align: center;
+     border: 1px solid #ddd;
+     border-radius: 10px;
+ }
+
+ .card img {
+     width: 100%;
+     border-radius: 10px;
+ }
+
+ .card button {
+     margin-top: 10px;
+     padding: 10px 20px;
+     background: #c8a88a;
+     color: white;
+     border: none;
+     cursor: pointer;
+ }
+
+ footer {
+     background: #222;
+     color: white;
+     padding: 40px;
+     text-align: center;
+ }
