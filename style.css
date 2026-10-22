@@ -131,3 +131,309 @@ nav a:hover::after {
      padding: 40px;
      text-align: center;
  }
+
+
+ body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+     background: #fff;
+     color: #333;
+ }
+
+* {
+    box-sizing: border-box;
+}
+
+ header {
+     background: #f5e6d4;
+     padding: 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .logo {
+     font-size: 28px;
+     font-weight: bold;
+ }
+
+nav a {
+  position: relative;
+  color: #333;
+  margin: 0 15px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0d6efd;
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: #0d6efd;
+  transform: scale(1.1);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+ .hero {
+     display: flex;
+     padding: 40px;
+     background: #fafafa;
+ }
+
+ .hero-text {
+     flex: 1;
+     padding: 20px;
+ }
+
+ .hero-text h1 {
+     font-size: 50px;
+     line-height: 1.2;
+ }
+
+ .hero-text button {
+     padding: 12px 25px;
+     background: black;
+     color: white;
+     border: none;
+     cursor: pointer;
+     margin-top: 20px;
+ }
+
+ .hero-img {
+     flex: 1;
+ }
+
+ .hero-img img {
+     width: 100%;
+     border-radius: 10px;
+ }
+
+ .banner {
+     text-align: center;
+     padding: 50px 20px;
+     background: #fff5e9;
+ }
+
+ .banner h2 {
+     font-size: 40px;
+ }
+
+ .banner span {
+     font-size: 60px;
+     font-weight: bold;
+ }
+
+ .products {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+     padding: 40px;
+ }
+
+ .card {
+     background: white;
+     padding: 20px;
+     text-align: center;
+     border: 1px solid #ddd;
+     border-radius: 10px;
+ }
+
+ .card img {
+     width: 100%;
+     border-radius: 10px;
+ }
+
+ .card button {
+     margin-top: 10px;
+     padding: 10px 20px;
+     background: #c8a88a;
+     color: white;
+     border: none;
+     cursor: pointer;
+ }
+
+ footer {
+     background: #222;
+     color: white;
+     padding: 40px;
+     text-align: center;
+ }
+
+@media (max-width: 768px) {
+    header {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        align-items: center;
+        padding: 32px 24px;
+        gap: 24px;
+    }
+
+    .hero-text {
+        padding: 8px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(32px, 6vw, 44px);
+    }
+
+    .banner {
+        padding: 36px 20px;
+    }
+
+    .banner h2 {
+        font-size: 34px;
+    }
+
+    .banner span {
+        font-size: 48px;
+    }
+
+    .products {
+        padding: 28px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+        padding: 16px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    nav {
+        width: 100%;
+        gap: 10px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 28px 18px;
+        gap: 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        margin: 0 0 14px;
+        font-size: clamp(34px, 10vw, 46px);
+    }
+
+    .hero-text p {
+        line-height: 1.6;
+    }
+
+    .hero-text button {
+        min-height: 44px;
+        margin-top: 12px;
+    }
+
+    .hero-img {
+        width: 100%;
+    }
+
+    .hero-img img {
+        display: block;
+        max-height: 440px;
+        object-fit: cover;
+        object-position: center 25%;
+    }
+
+    .banner {
+        padding: 30px 16px;
+    }
+
+    .banner h2 {
+        margin: 0 0 8px;
+        font-size: clamp(26px, 8vw, 34px);
+    }
+
+    .banner span {
+        font-size: clamp(42px, 12vw, 54px);
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 20px 14px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card img {
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .card button {
+        min-height: 42px;
+        padding: 9px 12px;
+    }
+
+    footer {
+        padding: 24px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .products {
+        grid-template-columns: 1fr;
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .card {
+        padding: 14px;
+    }
+}
